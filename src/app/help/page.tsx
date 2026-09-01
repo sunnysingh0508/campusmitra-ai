@@ -17,7 +17,7 @@ const FAQs = [
 ];
 
 const CATEGORIES = [
-    { icon: Rocket, title: "Getting Started", description: "New to BSDK AI? Start here." },
+    { icon: Rocket, title: "Getting Started", description: "New to Campus Mitra? Start here." },
     { icon: User, title: "Account & Login", description: "Manage profile and security." },
     { icon: Calculator, title: "Attendance & Bunk", description: "Master your attendance logic." },
     { icon: BookOpen, title: "Assignments", description: "Track deadlines efficiently." },
@@ -43,7 +43,7 @@ export default function HelpPage() {
                         <HelpCircle className="w-8 h-8 text-[#6366F1]" />
                         <h1 className="text-3xl font-bold font-heading text-white">Help & Support</h1>
                     </div>
-                    <p className="text-gray-400 mb-8">We’re here to help you get the most out of BSDK AI.</p>
+                    <p className="text-gray-400 mb-8">We’re here to help you get the most out of Campus Mitra.</p>
                     <SearchBar onSearch={setSearchQuery} />
                 </div>
 

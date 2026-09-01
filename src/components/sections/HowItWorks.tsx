@@ -9,7 +9,7 @@ const steps = [
     },
     {
         title: "AI Analysis",
-        description: "Let BSDK AI analyze your attendance trends, grades, and study patterns.",
+        description: "Let Campus Mitra analyze your attendance trends, grades, and study patterns.",
         icon: BrainCircuit,
     },
     {

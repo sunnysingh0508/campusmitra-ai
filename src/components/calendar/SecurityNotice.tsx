@@ -11,7 +11,7 @@ export function SecurityNotice() {
             </div>
 
             <p className="text-sm text-muted-foreground mb-6">
-                Your data is secure. BSDK AI adheres to strict privacy standards when accessing your calendar.
+                Your data is secure. Campus Mitra adheres to strict privacy standards when accessing your calendar.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2">

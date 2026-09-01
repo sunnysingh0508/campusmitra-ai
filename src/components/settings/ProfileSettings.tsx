@@ -48,7 +48,7 @@ export default function ProfileSettings() {
                     <label className="text-xs text-gray-500 font-medium mb-1.5 block">Email Address</label>
                     <input
                         type="email"
-                        value="sunny@bsdk.ai"
+                        value="sunny@campusmitra.ai"
                         readOnly
                         className="w-full bg-[#0E1017]/50 border border-white/5 rounded-xl px-4 py-2.5 text-sm text-gray-500 cursor-not-allowed"
                     />

@@ -15,7 +15,7 @@ export default function ReportPreview() {
                         <p className="text-sm text-gray-500">Generated on Oct 24, 2023</p>
                     </div>
                     <div className="text-right">
-                        <div className="text-xl font-bold text-indigo-600 mb-1">BSDK AI</div>
+                        <div className="text-xl font-bold text-indigo-600 mb-1">Campus Mitra</div>
                         <p className="text-xs text-gray-400">Smart College OS</p>
                     </div>
                 </div>

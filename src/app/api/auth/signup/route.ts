@@ -14,10 +14,12 @@ export async function POST(req: Request) {
             );
         }
 
+        const normalizedEmail = email.toLowerCase().trim();
+
         await dbConnect();
 
         // Check if user already exists
-        const existingUser = await User.findOne({ email });
+        const existingUser = await User.findOne({ email: normalizedEmail });
         if (existingUser) {
             return NextResponse.json(
                 { message: "User already exists" },
@@ -31,7 +33,7 @@ export async function POST(req: Request) {
         // Create user
         await User.create({
             name,
-            email,
+            email: normalizedEmail,
             password: hashedPassword,
         });
 

@@ -1,46 +1,46 @@
-import { LoginForm } from "@/components/auth/LoginForm";
-import { AuthVisual } from "@/components/auth/AuthVisual";
-import Link from "next/link";
-import Image from "next/image";
-
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
+import { BrandLogo } from "@/components/auth/BrandLogo";
+import { AuthCard } from "@/components/auth/AuthCard";
 
 export const metadata = {
-    title: "Login - BSDK AI Smart College OS",
-    description: "Login to your dashboard to manage attendance, assignments, and grades.",
+  title: "Login - Campus Mitra Smart College OS",
+  description: "Sign in to Campus Mitra with your Google account.",
 };
 
-export default function LoginPage() {
-    return (
-        <div className="container relative h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+interface LoginPageProps {
+  searchParams: Promise<{
+    error?: string;
+    callbackUrl?: string;
+  }>;
+}
 
-            {/* Mobile Logo Link */}
-            <div className="absolute left-4 top-4 md:left-8 md:top-8 z-20">
-                <Link href="/" className="flex items-center gap-2">
+export default async function LoginPage({ searchParams }: LoginPageProps) {
+  // Check server-side session: redirect authenticated users away from /login
+  const session = await auth();
+  const params = await searchParams;
 
-                    <div className="flex items-center gap-2">
-                        <Image
-                            src="/logo.png"
-                            alt="BSDK AI Logo"
-                            width={32}
-                            height={32}
-                            className="rounded-full"
-                        />
-                        <span className="text-xl font-bold tracking-tight text-foreground hidden md:block leading-none">
-                            BSDK AI
-                        </span>
-                    </div>
-                </Link>
-            </div>
+  if (session?.user) {
+    const isNewUser = (session.user as any)?.isNewUser;
+    if (isNewUser) {
+      redirect("/onboarding");
+    } else {
+      redirect(params.callbackUrl || "/dashboard");
+    }
+  }
 
-            {/* Left Column - Form */}
-            <div className="flex h-full w-full flex-col justify-center px-4 lg:p-8 relative z-10 bg-white dark:bg-zinc-900">
-                <LoginForm />
-            </div>
+  const errorParam = params.error || null;
+  const callbackUrl = params.callbackUrl || "/dashboard";
 
-            {/* Right Column - Visual (Hidden on mobile) */}
-            <div className="relative hidden h-full flex-col bg-slate-50 p-0 text-white lg:flex">
-                <AuthVisual />
-            </div>
-        </div>
-    );
+  return (
+    <main className="min-h-screen w-full bg-[#0E1017] flex items-center justify-center p-4 relative overflow-hidden font-sans selection:bg-[#7C83FF]/20 selection:text-[#7C83FF]">
+      {/* Brand Logo Header */}
+      <BrandLogo />
+
+      {/* Centered Auth Card */}
+      <div className="z-10 flex items-center justify-center w-full">
+        <AuthCard initialError={errorParam} callbackUrl={callbackUrl} />
+      </div>
+    </main>
+  );
 }

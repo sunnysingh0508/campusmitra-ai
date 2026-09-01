@@ -15,7 +15,7 @@ export default function ContactSupport() {
                     </div>
                     <div>
                         <h3 className="text-sm font-bold text-white mb-0.5">Email Support</h3>
-                        <p className="text-xs text-gray-400 mb-2">support@bsdk.ai</p>
+                        <p className="text-xs text-gray-400 mb-2">support@campusmitra.ai</p>
                         <div className="text-[10px] text-[#6366F1] bg-[#6366F1]/10 px-2 py-0.5 rounded-full inline-block font-medium">
                             Response in 24h
                         </div>

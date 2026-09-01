@@ -73,11 +73,11 @@ export function SyncSettings({ className, isConnected }: SyncSettingsProps) {
                     <RadioGroup defaultValue="one-way">
                         <div className="flex items-center space-x-2">
                             <RadioGroupItem value="one-way" id="one-way" className="border-muted-foreground text-[#6366F1]" />
-                            <Label htmlFor="one-way" className="text-sm text-white">One-way (BSDK AI → Calendar)</Label>
+                            <Label htmlFor="one-way" className="text-sm text-white">One-way (Campus Mitra → Calendar)</Label>
                         </div>
                         <div className="flex items-center space-x-2">
                             <RadioGroupItem value="two-way" id="two-way" className="border-muted-foreground text-[#6366F1]" />
-                            <Label htmlFor="two-way" className="text-sm text-white">Two-way (Calendar ↔ BSDK AI)</Label>
+                            <Label htmlFor="two-way" className="text-sm text-white">Two-way (Calendar ↔ Campus Mitra)</Label>
                         </div>
                     </RadioGroup>
                 </div>

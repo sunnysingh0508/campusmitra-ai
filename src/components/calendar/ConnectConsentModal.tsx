@@ -36,7 +36,7 @@ export function ConnectConsentModal({
                     </div>
                     <h3 className="text-xl font-bold text-white">Connect {providerName}</h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                        BSDK AI requests access to your calendar
+                        Campus Mitra requests access to your calendar
                     </p>
                 </div>
 

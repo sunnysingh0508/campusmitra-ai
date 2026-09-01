@@ -13,7 +13,7 @@ export default function RemindersPage() {
 
     // Initial dummy data or load from localStorage
     useEffect(() => {
-        const stored = localStorage.getItem('bsdk-reminders');
+        const stored = localStorage.getItem('campus-mitra-reminders');
         if (stored) {
             try {
                 const parsed = JSON.parse(stored);
@@ -33,8 +33,8 @@ export default function RemindersPage() {
     }, []);
 
     useEffect(() => {
-        if (reminders.length > 0 || localStorage.getItem('bsdk-reminders')) {
-            localStorage.setItem('bsdk-reminders', JSON.stringify(reminders));
+        if (reminders.length > 0 || localStorage.getItem('campus-mitra-reminders')) {
+            localStorage.setItem('campus-mitra-reminders', JSON.stringify(reminders));
         }
     }, [reminders]);
 

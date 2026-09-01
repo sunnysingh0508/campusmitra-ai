@@ -12,12 +12,12 @@ export function CtaBanner() {
                             Start managing college like a pro.
                         </h2>
                         <p className="mx-auto mt-6 max-w-xl text-lg text-indigo-100">
-                            Join thousands of students who have already upgraded their academic life with BSDK AI.
+                            Join thousands of students who have already upgraded their academic life with Campus Mitra.
                         </p>
                         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                             <Link href="/signup">
                                 <Button size="lg" className="bg-white text-indigo-600 hover:bg-indigo-50 shadow-none border-none">
-                                    Launch BSDK AI <ArrowRight className="ml-2 h-4 w-4" />
+                                    Launch Campus Mitra <ArrowRight className="ml-2 h-4 w-4" />
                                 </Button>
                             </Link>
                         </div>

@@ -11,6 +11,8 @@ import { Button } from "@/components/ui/Button";
 import { Checkbox } from "@/components/ui/Checkbox";
 import { Mail, Lock, Eye, EyeOff, Loader2, AlertCircle } from "lucide-react";
 
+import { signIn } from "next-auth/react";
+
 // Form Schema
 const formSchema = z.object({
     email: z.string().email({ message: "Please enter a valid email address." }),
@@ -36,7 +38,7 @@ export function LoginForm() {
         resolver: zodResolver(formSchema),
         mode: "onChange",
         defaultValues: {
-            email: "demo@bsdk.ai", // Pre-filled for convenience
+            email: "demo@campusmitra.ai", // Pre-filled for convenience
             password: "password123",
             rememberMe: false,
         },
@@ -46,15 +48,25 @@ export function LoginForm() {
         setIsLoading(true);
         setRootError(null);
 
-        // Simulate API call
-        setTimeout(() => {
-            if (data.email === "demo@bsdk.ai" && data.password === "password123") {
-                router.push("/dashboard");
-            } else {
-                setRootError("Invalid credentials. Try demo@bsdk.ai / password123");
+        try {
+            const res = await signIn("credentials", {
+                email: data.email,
+                password: data.password,
+                redirect: false,
+            });
+
+            if (res?.error) {
+                setRootError("Invalid email or password. Please try again.");
                 setIsLoading(false);
+            } else {
+                router.push("/dashboard");
+                router.refresh();
             }
-        }, 1500);
+        } catch (err) {
+            console.error("Login submit error:", err);
+            setRootError("An error occurred during login. Please try again.");
+            setIsLoading(false);
+        }
     }
 
     return (
@@ -69,7 +81,7 @@ export function LoginForm() {
 
                 {/* Dev Hint */}
                 <div className="mt-2 rounded-lg bg-indigo-50 p-2 text-xs text-indigo-600 border border-indigo-100">
-                    <b>Dev Hint:</b> Use <code>demo@bsdk.ai</code> / <code>password123</code>
+                    <b>Dev Hint:</b> Use <code>demo@campusmitra.ai</code> / <code>password123</code>
                 </div>
             </div>
 

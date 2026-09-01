@@ -13,13 +13,13 @@ export function Navbar() {
                     <div className="flex items-center gap-2">
                         <Image
                             src="/logo.png"
-                            alt="BSDK AI Logo"
+                            alt="Campus Mitra Logo"
                             width={32}
                             height={32}
                             className="rounded-full"
                         />
                         <span className="text-xl font-bold tracking-tight text-foreground leading-none">
-                            BSDK AI
+                            Campus Mitra
                         </span>
                     </div>
                 </div>

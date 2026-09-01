@@ -56,7 +56,7 @@ export default function AdminSidebar() {
             <div className="flex h-16 items-center border-b border-white/5 px-6">
                 <div className="flex items-center gap-2 font-bold text-xl tracking-tight text-white">
                     <Shield className="h-6 w-6 text-[#6366F1]" />
-                    <span>BSDK Admin</span>
+                    <span>Campus Mitra Admin</span>
                 </div>
             </div>
 

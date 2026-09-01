@@ -9,6 +9,8 @@ import SecuritySummary from '@/components/profile/SecuritySummary';
 import { LogOut, Trash2 } from 'lucide-react';
 import Link from 'next/link';
 
+import { signOut } from 'next-auth/react';
+
 export interface UserProfile {
     fullName: string;
     email: string;
@@ -21,7 +23,7 @@ export interface UserProfile {
 export default function ProfilePage() {
     const [user, setUser] = React.useState<UserProfile>({
         fullName: "Sunny Singh",
-        email: "sunny@bsdk.ai",
+        email: "sunny@campusmitra.ai",
         phone: "+91 98765 43210",
         college: "Delhi Technological University",
         course: "B.Tech Computer Science",
@@ -31,6 +33,12 @@ export default function ProfilePage() {
     const handleUpdateProfile = (updatedUser: UserProfile) => {
         setUser(updatedUser);
         // In a real app, make an API call here
+    };
+
+    const handleDeleteAccount = () => {
+        if (confirm("Are you sure you want to delete your account? This action cannot be undone.")) {
+            signOut({ callbackUrl: "/login" });
+        }
     };
 
     return (
@@ -53,7 +61,10 @@ export default function ProfilePage() {
                     {/* Actions */}
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 rounded-[24px] border border-white/5">
                         <div className="flex items-center gap-4">
-                            <button className="flex items-center gap-2 px-4 py-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 transition-colors text-sm font-medium">
+                            <button 
+                                onClick={() => signOut({ callbackUrl: "/login" })}
+                                className="flex items-center gap-2 px-4 py-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 transition-colors text-sm font-medium cursor-pointer"
+                            >
                                 <LogOut className="w-4 h-4" />
                                 Logout
                             </button>
@@ -62,7 +73,10 @@ export default function ProfilePage() {
                             </Link>
                         </div>
 
-                        <button className="flex items-center gap-2 px-4 py-2 rounded-xl text-red-500 hover:bg-red-500/10 transition-colors text-sm font-medium">
+                        <button 
+                            onClick={handleDeleteAccount}
+                            className="flex items-center gap-2 px-4 py-2 rounded-xl text-red-500 hover:bg-red-500/10 transition-colors text-sm font-medium cursor-pointer"
+                        >
                             <Trash2 className="w-4 h-4" />
                             Delete Account
                         </button>

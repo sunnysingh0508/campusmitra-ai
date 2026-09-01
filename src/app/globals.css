@@ -1,169 +1,81 @@
 @import "tailwindcss";
 
 :root {
-    /* BSDK AI Color Palette - Light Mode */
-    --background: #F8F9FC;
-    --foreground: #0f172a;
-    /* Slate 900 */
-
-    --primary: #6366F1;
-    /* Indigo */
+    /* Campus Mitra Restrained Dark Theme Colors */
+    --background: #0B0D12;
+    --background-secondary: #11141B;
+    --card: #151922;
+    --border: #262B36;
+    
+    --foreground: #F5F7FA;
+    --muted-foreground: #9AA3B2;
+    --subtle-foreground: #6B7280;
+    
+    --primary: #7C83FF;
     --primary-foreground: #ffffff;
-
-    --secondary: #A855F7;
-    /* Purple */
-    --secondary-foreground: #ffffff;
-
-    --accent: #EC4899;
-    /* Pink */
-    --accent-foreground: #ffffff;
-
-    --card: #FFFFFF;
-    --card-foreground: #0f172a;
-
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
-
-    --border: #e2e8f0;
-    --input: #e2e8f0;
-    --ring: #6366F1;
-
-    /* Font Variables (mapped from layout.tsx) */
-    --font-sans: var(--font-inter);
-    --font-heading: var(--font-dm-sans);
-    --font-heading: var(--font-dm-sans);
-
-    /* Glass Vars - Light */
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-card-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(226, 232, 240, 0.5);
+    
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    
+    --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+    --font-heading: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0f172a;
-        /* Slate 900 */
-        --foreground: #f8fafc;
-
-        --primary: #818cf8;
-        --primary-foreground: #0f172a;
-
-        --secondary: #c084fc;
-        --secondary-foreground: #0f172a;
-
-        --accent: #f472b6;
-        --accent-foreground: #0f172a;
-
-        --card: #1e293b;
-        /* Slate 800 */
-        --card-foreground: #f8fafc;
-
-        --muted: #334155;
-        /* Slate 700 */
-        --muted-foreground: #94a3b8;
-
-        --border: #334155;
-        /* Slate 700 */
-        --input: #334155;
-        --border: #334155;
-        /* Slate 700 */
-        --input: #334155;
-        --ring: #818cf8;
-
-        /* Glass Vars - Dark */
-        --glass-bg: rgba(30, 41, 59, 0.7);
-        --glass-card-bg: rgba(30, 41, 59, 0.8);
-        --glass-border: rgba(51, 65, 85, 0.5);
-    }
-}
-
-.dark {
-    --background: #0f172a;
-    --foreground: #f8fafc;
-
-    --primary: #818cf8;
-    --primary-foreground: #0f172a;
-
-    --secondary: #c084fc;
-    --secondary-foreground: #0f172a;
-
-    --accent: #f472b6;
-    --accent-foreground: #0f172a;
-
-    --card: #1e293b;
-    --card-foreground: #f8fafc;
-
-    --muted: #334155;
-    --muted-foreground: #94a3b8;
-
-    --border: #334155;
-    --input: #334155;
-    --border: #334155;
-    --input: #334155;
-    --ring: #818cf8;
-
-    /* Glass Vars - Dark */
-    --glass-bg: rgba(30, 41, 59, 0.7);
-    --glass-card-bg: rgba(30, 41, 59, 0.8);
-    --glass-border: rgba(51, 65, 85, 0.5);
+.dark, :root {
+    --background: #0B0D12;
+    --foreground: #F5F7FA;
+    --card: #151922;
+    --border: #262B36;
+    --primary: #7C83FF;
+    --muted: #11141B;
+    --muted-foreground: #9AA3B2;
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
+    --color-background: #0B0D12;
+    --color-bg-secondary: #11141B;
+    --color-card: #151922;
+    --color-card-border: #262B36;
+    
+    --color-foreground: #F5F7FA;
+    --color-muted: #9AA3B2;
+    --color-subtle: #6B7280;
+    
+    --color-primary: #7C83FF;
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-danger: #EF4444;
 
-    --color-primary: var(--primary);
-    --color-primary-foreground: var(--primary-foreground);
-
-    --color-secondary: var(--secondary);
-    --color-secondary-foreground: var(--secondary-foreground);
-
-    --color-accent: var(--accent);
-    --color-accent-foreground: var(--accent-foreground);
-
-    --color-card: var(--card);
-    --color-card-foreground: var(--card-foreground);
-
-    --color-muted: var(--muted);
-    --color-muted-foreground: var(--muted-foreground);
-
-    --color-border: var(--border);
-    --color-input: var(--input);
-    --color-ring: var(--ring);
-
-    --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-    --font-heading: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+    --font-sans: var(--font-inter), system-ui, sans-serif;
+    --font-heading: var(--font-dm-sans), system-ui, sans-serif;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--foreground);
+    background-color: #0B0D12;
+    color: #F5F7FA;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
 }
 
-/* Glassmorphism Utilities */
-/* Glassmorphism Utilities */
-.glass {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
+/* Custom scrollbar for product feel */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
-
-.glass-card {
-    background: var(--glass-card-bg);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--glass-border);
+::-webkit-scrollbar-track {
+    background: #0B0D12;
 }
+::-webkit-scrollbar-thumb {
+    background: #262B36;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3B4252;
+}

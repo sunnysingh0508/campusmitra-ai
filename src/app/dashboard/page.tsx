@@ -110,7 +110,7 @@ export default function DashboardPage() {
                         <div className="space-y-4">
                             <div className="flex items-center justify-between">
                                 <h2 className="font-bold text-lg text-foreground">Attendance & Bunk Status</h2>
-                                <button className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">Manage</button>
+                                <Link href="/attendance" className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">Manage</Link>
                             </div>
                             <div className="rounded-xl border border-border bg-card text-card-foreground p-6 shadow-sm">
                                 <AttendanceWidget attendance={currentData.attendance} />

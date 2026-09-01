@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import BunkCalculatorCard from '@/components/BunkCalculatorCard';
 
 export const metadata: Metadata = {
-    title: 'Bunk Calculator | BSDK AI',
+    title: 'Bunk Calculator | Campus Mitra',
     description: 'Calculate safe bunks and manage your attendance effectively.',
 };
 

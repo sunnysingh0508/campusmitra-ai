@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Mitra – Your college life, organized in one place.</title>
+  <meta name="description" content="Track attendance, calculate CGPA, manage assignments, organize notes, and plan your timetable from one simple dashboard." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon"><i data-lucide="graduation-cap"></i></div>
+        <span>Campus Mitra</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-ghost">Log in</a>
+        <a href="dashboard.html" class="btn-primary btn-sm">
+          Get Started <i data-lucide="arrow-right" class="icon-inline"></i>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <i data-lucide="menu" id="menuIcon"></i>
+      </button>
+    </div>
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#features" class="mobile-link">Features</a>
+      <a href="#how-it-works" class="mobile-link">How it Works</a>
+      <a href="#analytics" class="mobile-link">Analytics</a>
+      <a href="#about" class="mobile-link">About</a>
+      <div class="mobile-actions">
+        <a href="login.html" class="btn-ghost w-full">Log in</a>
+        <a href="dashboard.html" class="btn-primary w-full">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="grid-bg"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-left anim-up">
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>BUILT FOR COLLEGE LIFE
+            </div>
+            <h1 class="hero-heading">
+              Your college life,<br>organized in <span class="accent">one place.</span>
+            </h1>
+            <p class="hero-desc">
+              Track attendance, calculate CGPA, manage assignments, organize notes,
+              and plan your timetable from one simple dashboard.
+            </p>
+            <div class="hero-cta-row">
+              <a href="dashboard.html" class="btn-primary btn-lg">
+                Open Campus Mitra <i data-lucide="arrow-right" class="icon-inline"></i>
+              </a>
+              <a href="#features" class="btn-secondary btn-lg">Explore Features</a>
+            </div>
+            <div class="hero-trust">
+              <span class="trust-dot"></span>
+              <span>One dashboard. Your entire academic routine.</span>
+            </div>
+          </div>
+
+          <div class="hero-right anim-scale">
+            <div class="dashboard-preview">
+              <div class="dash-header">
+                <div class="dash-title-row">
+                  <i data-lucide="layout-dashboard" class="icon-inline accent-color"></i>
+                  <span>Dashboard Overview</span>
+                </div>
+                <span class="dash-badge">Safe</span>
+              </div>
+              <div class="dash-stats">
+                <div class="stat-item">
+                  <div class="stat-label">CGPA</div>
+                  <div class="stat-val">8.70</div>
+                  <div class="stat-change green">+0.30</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">Attendance</div>
+                  <div class="stat-val">82%</div>
+                  <div class="stat-change green">Safe zone</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">Assignments</div>
+                  <div class="stat-val">94%</div>
+                  <div class="stat-change muted">On-time</div>
+                </div>
+              </div>
+              <div class="dash-modules">
+                <div class="module-row">
+                  <div class="module-icon purple"><i data-lucide="calculator"></i></div>
+                  <span>CGPA Predictor</span>
+                  <i data-lucide="chevron-right" class="module-arrow"></i>
+                </div>
+                <div class="module-row">
+                  <div class="module-icon green"><i data-lucide="calendar-check"></i></div>
+                  <span>Attendance Tracker</span>
+                  <i data-lucide="chevron-right" class="module-arrow"></i>
+                </div>
+                <div class="module-row">
+                  <div class="module-icon yellow"><i data-lucide="check-square"></i></div>
+                  <span>Assignments</span>
+                  <i data-lucide="chevron-right" class="module-arrow"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section border-top">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Everything you need for college.</h2>
+          <p class="section-desc">Simple tools for the things students actually manage every week.</p>
+        </div>
+        <div class="features-grid">
+          <div class="card anim-scroll">
+            <div class="card-icon purple"><i data-lucide="calculator"></i></div>
+            <h3>CGPA Predictor</h3>
+            <p>Calculate your semester CGPA using credits and target grades.</p>
+          </div>
+          <div class="card anim-scroll">
+            <div class="card-icon green"><i data-lucide="calendar-check"></i></div>
+            <h3>Attendance Tracker</h3>
+            <p>Track attendance and understand how many classes you can safely miss.</p>
+          </div>
+          <div class="card anim-scroll">
+            <div class="card-icon yellow"><i data-lucide="check-square"></i></div>
+            <h3>Assignment Manager</h3>
+            <p>Keep deadlines, priorities, and progress in one place.</p>
+          </div>
+          <div class="card anim-scroll">
+            <div class="card-icon purple"><i data-lucide="file-text"></i></div>
+            <h3>Notes Library</h3>
+            <p>Organize scanned and uploaded notes by subject.</p>
+          </div>
+          <div class="card anim-scroll">
+            <div class="card-icon green"><i data-lucide="clock"></i></div>
+            <h3>Timetable Generator</h3>
+            <p>Create a practical weekly schedule around your classes.</p>
+          </div>
+          <div class="card anim-scroll">
+            <div class="card-icon yellow"><i data-lucide="bar-chart-3"></i></div>
+            <h3>Analytics</h3>
+            <p>Understand your academic performance over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="section border-top">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">How Campus Mitra works.</h2>
+          <p class="section-desc">Three simple steps to streamline your entire college workflow.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card anim-scroll">
+            <div class="step-num">STEP 01</div>
+            <h3>Set up your academic profile</h3>
+            <p>Input your college, current semester, target CGPA, and total degree credit structure.</p>
+          </div>
+          <div class="step-card anim-scroll">
+            <div class="step-num">STEP 02</div>
+            <h3>Add your subjects &amp; classes</h3>
+            <p>Enter your registered courses, weekly schedule, lab sessions, and attendance criteria.</p>
+          </div>
+          <div class="step-card anim-scroll">
+            <div class="step-num">STEP 03</div>
+            <h3>Let Campus Mitra organize the rest</h3>
+            <p>Track bunks, get assignment reminders, scan notes, and monitor your academic progress seamlessly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI SECTION -->
+    <section class="section border-top bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <i data-lucide="sparkles" class="icon-inline"></i>Practical Intelligence
+          </div>
+          <h2 class="section-title">Useful suggestions, when you need them.</h2>
+          <p class="section-desc">Campus Mitra turns your routine academic data into clear, actionable recommendations.</p>
+        </div>
+        <div class="ai-grid">
+          <div class="ai-card anim-scroll">
+            <div class="ai-card-top">
+              <span class="badge yellow-badge">Attendance Alert</span>
+              <i data-lucide="alert-circle" class="muted-icon"></i>
+            </div>
+            <p class="ai-text">"Your Data Structures attendance is 72%. You have approximately 2 safe classes to miss before falling below the 75% requirement."</p>
+            <div class="ai-footer">Generated from logged schedule &amp; attendance data</div>
+          </div>
+          <div class="ai-card anim-scroll">
+            <div class="ai-card-top">
+              <span class="badge purple-badge">Prioritization</span>
+              <i data-lucide="clock" class="muted-icon"></i>
+            </div>
+            <p class="ai-text">"You have 3 assignments due this week. Start with the Physics report due tomorrow, as it has the highest grade weight."</p>
+            <div class="ai-footer">Generated from logged schedule &amp; attendance data</div>
+          </div>
+          <div class="ai-card anim-scroll">
+            <div class="ai-card-top">
+              <span class="badge green-badge">Schedule Gap</span>
+              <i data-lucide="calendar" class="muted-icon"></i>
+            </div>
+            <p class="ai-text">"You have a 90-minute free slot today between Math and CS lab. Consider using it for revision or assignment work."</p>
+            <div class="ai-footer">Generated from logged schedule &amp; attendance data</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANALYTICS -->
+    <section id="analytics" class="section border-top">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Clear academic analytics.</h2>
+          <p class="section-desc">Monitor your semester trajectory with clean metrics and functional reports.</p>
+        </div>
+        <div class="analytics-grid">
+          <div class="analytics-card anim-scroll">
+            <div class="analytics-top">
+              <span class="analytics-label">CGPA Trend</span>
+              <i data-lucide="trending-up" class="icon-green"></i>
+            </div>
+            <div class="big-val">8.70 <span class="delta green">+0.30</span></div>
+            <p class="small-sub">Across 3 semesters</p>
+            <div class="bar-chart">
+              <div class="bars">
+                <div class="bar" style="height:65%"><span>8.4</span></div>
+                <div class="bar" style="height:75%"><span>8.6</span></div>
+                <div class="bar bar-hi" style="height:90%"><span>9.1</span></div>
+              </div>
+              <div class="bar-lbls"><span>Sem 1</span><span>Sem 2</span><span>Sem 3</span></div>
+            </div>
+          </div>
+
+          <div class="analytics-card anim-scroll">
+            <div class="analytics-top">
+              <span class="analytics-label">Attendance Stability</span>
+              <i data-lucide="bar-chart-2" class="icon-purple"></i>
+            </div>
+            <div class="big-val">82% <span class="delta green">&gt; 75% Target</span></div>
+            <p class="small-sub">Safe zone across 5 courses</p>
+            <div class="progress-list">
+              <div class="prog-item">
+                <div class="prog-row"><span>Math</span><span>88%</span></div>
+                <div class="prog-track"><div class="prog-fill green-fill" style="width:88%"></div></div>
+              </div>
+              <div class="prog-item">
+                <div class="prog-row"><span>Data Struct</span><span>72%</span></div>
+                <div class="prog-track"><div class="prog-fill yellow-fill" style="width:72%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="analytics-card anim-scroll">
+            <div class="analytics-top">
+              <span class="analytics-label">Assignment Completion</span>
+              <i data-lucide="check-circle-2" class="icon-green"></i>
+            </div>
+            <div class="big-val">94% <span class="delta muted">On-time</span></div>
+            <p class="small-sub">16 of 17 submitted</p>
+            <div class="info-box">
+              <div>
+                <div class="info-main">Pending: 1</div>
+                <div class="info-sub">Due in 3 days</div>
+              </div>
+              <span class="badge-optimal">Optimal</span>
+            </div>
+          </div>
+
+          <div class="analytics-card anim-scroll">
+            <div class="analytics-top">
+              <span class="analytics-label">Weekly Focus Time</span>
+              <i data-lucide="clock" class="icon-yellow"></i>
+            </div>
+            <div class="big-val">18.5 hrs <span class="delta muted">Logged</span></div>
+            <p class="small-sub">Classes + Self Study</p>
+            <div class="focus-list">
+              <div class="focus-row"><span>Lecture hours:</span><span class="fw">12.0 hrs</span></div>
+              <div class="focus-row"><span>Study &amp; Revision:</span><span class="fw purple-text">6.5 hrs</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDENT PROBLEMS -->
+    <section class="section border-top bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Designed around student problems.</h2>
+          <p class="section-desc">Addressing the exact daily friction points college students face every semester.</p>
+        </div>
+        <div class="problems-grid">
+          <div class="problem-card anim-scroll">
+            <div class="prob-row">
+              <div class="prob-icon"><i data-lucide="help-circle"></i></div>
+              <h3>"Where did my attendance go?"</h3>
+            </div>
+            <div class="sol-row">
+              <div class="sol-icon"><i data-lucide="check-circle-2"></i></div>
+              <p>Log class attendance daily. Get real-time percentage indicators and clear alerts before reaching safe limits.</p>
+            </div>
+          </div>
+          <div class="problem-card anim-scroll">
+            <div class="prob-row">
+              <div class="prob-icon"><i data-lucide="help-circle"></i></div>
+              <h3>"Which assignment is due first?"</h3>
+            </div>
+            <div class="sol-row">
+              <div class="sol-icon"><i data-lucide="check-circle-2"></i></div>
+              <p>A consolidated deadline tracker sorted by date, weight, and remaining completion time.</p>
+            </div>
+          </div>
+          <div class="problem-card anim-scroll">
+            <div class="prob-row">
+              <div class="prob-icon"><i data-lucide="help-circle"></i></div>
+              <h3>"What grades do I need to improve my CGPA?"</h3>
+            </div>
+            <div class="sol-row">
+              <div class="sol-icon"><i data-lucide="check-circle-2"></i></div>
+              <p>Target SGPA calculator that factors in credit values so you know exact exam requirements.</p>
+            </div>
+          </div>
+          <div class="problem-card anim-scroll">
+            <div class="prob-row">
+              <div class="prob-icon"><i data-lucide="help-circle"></i></div>
+              <h3>"Can I skip today's class?"</h3>
+            </div>
+            <div class="sol-row">
+              <div class="sol-icon"><i data-lucide="check-circle-2"></i></div>
+              <p>Bunk calculator displays exact safe class counts based on your course criteria.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section border-top" id="about">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-icon"><i data-lucide="graduation-cap"></i></div>
+          <h2>Make college a little easier.</h2>
+          <p>Keep your academic routine organized without switching between multiple tools.</p>
+          <a href="dashboard.html" class="btn-primary btn-lg">
+            Get Started <i data-lucide="arrow-right" class="icon-inline"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand">
+            <div class="brand-icon"><i data-lucide="graduation-cap"></i></div>
+            <span>Campus Mitra</span>
+          </a>
+          <p>Smart tools for everyday college life. Organising attendance, CGPA modeling, deadlines, and schedule management.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="cgpa-predictor.html">CGPA Predictor</a></li>
+            <li><a href="attendance.html">Attendance</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="help.html">Help &amp; Support</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Campus Mitra. All rights reserved.</span>
+        <span>Academic productivity platform for college students.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 
 export const metadata = {
-    title: "Forgot Password - BSDK AI Smart College OS",
+    title: "Forgot Password - Campus Mitra Smart College OS",
     description: "Reset your password to regain access to your dashboard.",
 };
 
@@ -18,7 +18,7 @@ export default function ForgotPasswordPage() {
 
                     <div className="flex flex-col">
                         <span className="text-xl font-bold tracking-tight text-foreground hidden md:block leading-none">
-                            BSDK AI
+                            Campus Mitra
                         </span>
                         <span className="text-[10px] font-medium text-muted-foreground hidden md:block leading-none">
                             BrightSight Student Development Kit – AI

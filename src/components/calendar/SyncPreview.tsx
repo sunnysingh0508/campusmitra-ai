@@ -33,7 +33,7 @@ export function SyncPreview() {
                 <table className="w-full text-sm text-left">
                     <thead className="text-xs uppercase text-muted-foreground bg-white/5 rounded-lg">
                         <tr>
-                            <th className="px-4 py-3 rounded-l-lg">BSDK AI Item</th>
+                            <th className="px-4 py-3 rounded-l-lg">Campus Mitra Item</th>
                             <th className="px-4 py-3">Mapping</th>
                             <th className="px-4 py-3">Calendar Event Title</th>
                             <th className="px-4 py-3">Date & Time</th>

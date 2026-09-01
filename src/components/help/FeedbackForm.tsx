@@ -15,7 +15,7 @@ export default function FeedbackForm() {
     return (
         <div className="bg-[#181B23] rounded-[24px] p-6 border border-white/5 h-full">
             <h2 className="text-lg font-bold text-white mb-2">Feedback & Suggestions</h2>
-            <p className="text-xs text-gray-400 mb-6">Help us improve BSDK AI. We listen to every idea.</p>
+            <p className="text-xs text-gray-400 mb-6">Help us improve Campus Mitra. We listen to every idea.</p>
 
             {submitted ? (
                 <div className="flex flex-col items-center justify-center h-[200px] text-center animate-in fade-in">

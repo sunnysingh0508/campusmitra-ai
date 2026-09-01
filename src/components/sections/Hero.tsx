@@ -33,7 +33,7 @@ export function Hero() {
                         <div className="flex flex-col gap-4 sm:flex-row">
                             <Link href="/signup">
                                 <Button size="lg" className="gap-2">
-                                    Launch BSDK AI <ArrowRight className="h-4 w-4" />
+                                    Launch Campus Mitra <ArrowRight className="h-4 w-4" />
                                 </Button>
                             </Link>
                             <Link href="/login">

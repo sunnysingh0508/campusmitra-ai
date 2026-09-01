@@ -38,7 +38,7 @@ export function Footer() {
 
                             <div className="flex flex-col">
                                 <span className="text-xl font-bold tracking-tight text-foreground leading-none">
-                                    BSDK AI
+                                    Campus Mitra
                                 </span>
                                 <span className="text-[10px] font-medium text-muted-foreground leading-none">
                                     BrightSight Student Development Kit – AI
@@ -101,7 +101,7 @@ export function Footer() {
                 </div>
 
                 <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-                    <p>© 2025 BSDK AI — Smart College Life OS. All rights reserved.</p>
+                    <p>© 2025 Campus Mitra — Smart College Life OS. All rights reserved.</p>
                 </div>
             </div>
         </footer>

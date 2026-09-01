@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BSDK AI - Smart College Life OS",
+  title: "Campus Mitra - Smart College Life OS",
   description: "The all-in-one dashboard for students. CGPA Predictor, Attendance Manager, Bunk Calculator, and more.",
   icons: {
     icon: "/favicon.ico",

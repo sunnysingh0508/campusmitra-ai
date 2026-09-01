@@ -15,7 +15,7 @@ export default function StepWelcome({ onNext }: StepWelcomeProps) {
             </div>
 
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
-                Welcome to BSDK AI 👋
+                Welcome to Campus Mitra 👋
             </h1>
 
             <p className="text-gray-400 text-lg mb-8 max-w-sm mx-auto">

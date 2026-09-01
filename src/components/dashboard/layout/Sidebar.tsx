@@ -27,6 +27,8 @@ import {
     Bell
 } from "lucide-react";
 
+import { signOut } from "next-auth/react";
+
 const sidebarItems = [
     {
         category: "Analytics",
@@ -98,13 +100,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                                 <div className="flex items-center gap-2">
                                     <Image
                                         src="/logo.png"
-                                        alt="BSDK AI Logo"
+                                        alt="Campus Mitra Logo"
                                         width={32}
                                         height={32}
                                         className="rounded-full"
                                     />
                                     <span className="text-xl font-bold tracking-tight text-foreground leading-none">
-                                        BSDK AI
+                                        Campus Mitra
                                     </span>
                                 </div>
                             </div>
@@ -112,7 +114,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         {collapsed && (
                             <Image
                                 src="/logo.png"
-                                alt="BSDK AI Logo"
+                                alt="Campus Mitra Logo"
                                 width={32}
                                 height={32}
                                 className="rounded-full"
@@ -196,9 +198,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                                     {!collapsed && <span>Help & Support</span>}
                                 </Link>
                                 <button
+                                    onClick={() => signOut({ callbackUrl: "/login" })}
                                     title={collapsed ? "Logout" : ""}
                                     className={cn(
-                                        "flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors",
+                                        "flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors cursor-pointer",
                                         collapsed ? "justify-center px-2" : "gap-3"
                                     )}
                                 >
@@ -219,7 +222,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         {!collapsed && (
                             <div className="flex-1 overflow-hidden animate-in fade-in">
                                 <p className="truncate text-sm font-medium text-foreground">Sunny Singh</p>
-                                <p className="truncate text-xs text-muted-foreground">sunny@bsdk.ai</p>
+                                <p className="truncate text-xs text-muted-foreground">sunny@campusmitra.ai</p>
                             </div>
                         )}
                     </div>

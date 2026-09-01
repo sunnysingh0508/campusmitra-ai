@@ -34,7 +34,7 @@ export default function SettingsPage() {
                 <DangerZone />
 
                 <div className="text-center text-xs text-gray-600 pt-8 pb-4">
-                    BSDK AI v1.0.0 • Build 2025.12.13
+                    Campus Mitra v1.0.0 • Build 2025.12.13
                 </div>
 
             </div>

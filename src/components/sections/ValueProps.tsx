@@ -7,7 +7,7 @@ const valueProps = [
     {
         title: "All Your Tools in One Place",
         description:
-            "No need to use multiple apps. BSDK AI integrates attendance, assignments, and grades into a single streamlined dashboard.",
+            "No need to use multiple apps. Campus Mitra integrates attendance, assignments, and grades into a single streamlined dashboard.",
         icon: Layers,
         color: "bg-blue-500/10 text-blue-500",
     },
@@ -32,7 +32,7 @@ export function ValueProps() {
         <SectionWrapper className="bg-background">
             <div className="mb-16 text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                    Why Students Choose BSDK AI?
+                    Why Students Choose Campus Mitra?
                 </h2>
             </div>
 
