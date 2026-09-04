@@ -4,6 +4,40 @@
 
 // ── Lucide Icons Initialize ─────────────────
 document.addEventListener('DOMContentLoaded', () => {
+  // ── Dark / Light Theme Toggle ─────────────
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const mobileThemeToggleBtn = document.getElementById('mobileThemeToggleBtn');
+  
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  if (savedTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.body.classList.add('light-theme');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.body.classList.remove('light-theme');
+  }
+
+  function toggleTheme() {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light' || document.body.classList.contains('light-theme');
+    const newTheme = isLight ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    if (newTheme === 'light') {
+      document.body.classList.add('light-theme');
+    } else {
+      document.body.classList.remove('light-theme');
+    }
+    localStorage.setItem('theme', newTheme);
+    lucide.createIcons();
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+  }
+  if (mobileThemeToggleBtn) {
+    mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+  }
+
   lucide.createIcons();
 
   // ── Navbar Scroll Effect ──────────────────

@@ -3,6 +3,7 @@
 import React from 'react';
 import { Search, Bell, Shield, ChevronDown } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export default function AdminNavbar() {
     const pathname = usePathname();
@@ -34,6 +35,7 @@ export default function AdminNavbar() {
 
             {/* Actions */}
             <div className="flex items-center gap-4">
+                <ThemeToggle />
                 <button className="relative p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors">
                     <Bell className="w-5 h-5" />
                     <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-red-500 border border-[#0E1017]"></span>

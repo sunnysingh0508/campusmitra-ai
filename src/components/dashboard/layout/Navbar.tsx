@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 interface NavbarProps {
     onMenuClick?: () => void;
@@ -37,9 +38,11 @@ export function Navbar({ onMenuClick }: NavbarProps) {
                     />
                 </div>
 
+                <ThemeToggle />
+
                 <Link href="/notifications" className="relative flex h-9 w-9 items-center justify-center rounded-full hover:bg-muted/50 transition-colors">
                     <Bell className="h-5 w-5 text-muted-foreground" />
-                    <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-zinc-900" />
+                    <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500 ring-2 ring-card" />
                 </Link>
 
                 <Link href="/profile" className="h-8 w-8 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 p-[2px] cursor-pointer hover:opacity-90 transition-opacity">

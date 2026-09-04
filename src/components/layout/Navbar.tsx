@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 
 export function Navbar() {
@@ -38,7 +39,8 @@ export function Navbar() {
                 </nav>
 
                 {/* CTA */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
+                    <ThemeToggle />
                     <Link href="/login" className="text-sm font-medium text-muted-foreground hover:text-foreground hidden sm:block">
                         Log in
                     </Link>

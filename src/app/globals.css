@@ -1,81 +1,145 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-    /* Campus Mitra Restrained Dark Theme Colors */
-    --background: #0B0D12;
-    --background-secondary: #11141B;
-    --card: #151922;
-    --border: #262B36;
+    /* Campus Mitra Light Theme */
+    --background: #F8FAFC;
+    --background-secondary: #FFFFFF;
+    --card: #FFFFFF;
+    --card-secondary: #F1F5F9;
+    --border: #E2E8F0;
+    --border-subtle: #EDF2F7;
     
-    --foreground: #F5F7FA;
-    --muted-foreground: #9AA3B2;
-    --subtle-foreground: #6B7280;
+    --foreground: #0F172A;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --subtle-foreground: #94A3B8;
     
-    --primary: #7C83FF;
-    --primary-foreground: #ffffff;
+    --primary: #6366F1;
+    --primary-hover: #4F46E5;
+    --primary-foreground: #FFFFFF;
     
-    --success: #22C55E;
-    --warning: #F59E0B;
-    --danger: #EF4444;
+    --success: #16A34A;
+    --warning: #D97706;
+    --danger: #DC2626;
     
     --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
     --font-heading: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
 }
 
-.dark, :root {
+.dark {
+    /* Campus Mitra Dark Theme */
     --background: #0B0D12;
-    --foreground: #F5F7FA;
+    --background-secondary: #11141B;
     --card: #151922;
+    --card-secondary: #181B23;
     --border: #262B36;
-    --primary: #7C83FF;
+    --border-subtle: #1F2430;
+    
+    --foreground: #F5F7FA;
     --muted: #11141B;
     --muted-foreground: #9AA3B2;
+    --subtle-foreground: #6B7280;
+    
+    --primary: #7C83FF;
+    --primary-hover: #6B72F0;
+    --primary-foreground: #FFFFFF;
+    
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
 }
 
 @theme inline {
-    --color-background: #0B0D12;
-    --color-bg-secondary: #11141B;
-    --color-card: #151922;
-    --color-card-border: #262B36;
+    --color-background: var(--background);
+    --color-bg-secondary: var(--background-secondary);
+    --color-card: var(--card);
+    --color-card-border: var(--border);
+    --color-border: var(--border);
     
-    --color-foreground: #F5F7FA;
-    --color-muted: #9AA3B2;
-    --color-subtle: #6B7280;
+    --color-foreground: var(--foreground);
+    --color-muted: var(--muted-foreground);
+    --color-subtle: var(--subtle-foreground);
     
-    --color-primary: #7C83FF;
-    --color-success: #22C55E;
-    --color-warning: #F59E0B;
-    --color-danger: #EF4444;
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+    --color-danger: var(--danger);
 
     --font-sans: var(--font-inter), system-ui, sans-serif;
     --font-heading: var(--font-dm-sans), system-ui, sans-serif;
 }
 
 body {
-    background-color: #0B0D12;
-    color: #F5F7FA;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
 }
 
-/* Custom scrollbar for product feel */
+/* Light mode overrides for existing hardcoded dark hex color utilities */
+html:not(.dark) .bg-\[\#0B0D12\],
+html:not(.dark) .bg-\[\#0b0d12\],
+html:not(.dark) .bg-\[\#0E1017\] {
+    background-color: #F8FAFC !important;
+}
+
+html:not(.dark) .bg-\[\#0B0D12\]\/90,
+html:not(.dark) .bg-\[\#0b0d12\]\/90,
+html:not(.dark) .bg-\[\#0E1017\]\/80 {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html:not(.dark) .bg-\[\#151922\],
+html:not(.dark) .bg-\[\#181B23\],
+html:not(.dark) .bg-\[\#11141B\] {
+    background-color: #FFFFFF !important;
+}
+
+html:not(.dark) .border-\[\#262B36\],
+html:not(.dark) .border-\[\#262B36\]\/60,
+html:not(.dark) .border-\[\#262B36\]\/80,
+html:not(.dark) .border-white\/5,
+html:not(.dark) .border-white\/10 {
+    border-color: #E2E8F0 !important;
+}
+
+html:not(.dark) .text-\[\#F5F7FA\],
+html:not(.dark) .text-white {
+    color: #0F172A !important;
+}
+
+html:not(.dark) .text-\[\#9AA3B2\],
+html:not(.dark) .text-gray-400,
+html:not(.dark) .text-gray-500 {
+    color: #64748B !important;
+}
+
+html:not(.dark) .text-\[\#6B7280\] {
+    color: #94A3B8 !important;
+}
+
+/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #0B0D12;
+    background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-    background: #262B36;
+    background: var(--border);
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #3B4252;
-}
+    background: var(--muted-foreground);
+}
